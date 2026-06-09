@@ -1,9 +1,10 @@
 import {
   Disc3,
-  Bike,
   Wrench,
   Droplet,
   Sparkles,
+  Clock,
+  CalendarCheck,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -11,27 +12,32 @@ const services = [
   {
     icon: Disc3,
     title: "Gumiabroncs kereskedelem & Szerelés",
-    desc: "Prémium és minőségi személy- és kisteherautó gumiabroncsok értékesítése, szerelése és centírozása.",
-  },
-  {
-    icon: Bike,
-    title: "Motorkerékpár gumiabroncs szerelés",
-    desc: "Motorkerékpár abroncsok szakszerű szerelése, centírozása és egyensúlyozása modern berendezésekkel.",
+    desc: "Prémium és minőségi gumiabroncsok értékesítése, szerelése és centírozása.",
   },
   {
     icon: Wrench,
     title: "Alufelnik és lemezfelnik javítása & forgalmazása",
-    desc: "Sérült felnik professzionális javítása, görgőzése, egyengetése és új felnik értékesítése.",
+    desc: "Sérült felnik professzionális javítása, görgőzése és új felnik értékesítése.",
   },
   {
     icon: Droplet,
     title: "Hidraulika tömlők gyártása, javítása & forgalmazása",
-    desc: "Azonnali hidraulika tömlő roppantás, méretre gyártás és javítás vásárosnaményi telephelyeinken.",
+    desc: "Azonnali hidraulika tömlő roppantás, méretre gyártás és javítás.",
   },
   {
     icon: Sparkles,
     title: "Autóápolási és autókozmetikai termékek",
-    desc: "Minőségi autóápolási szerek, viaszok, tisztítószerek, Koch-Chemie termékek és kiegészítők forgalmazása.",
+    desc: "Minőségi autóápolási szerek, viaszok, tisztítószerek és kiegészítők forgalmazása.",
+  },
+  {
+    icon: Clock,
+    title: "Időszakos gyorsszerviz",
+    desc: "Gyors olajcsere, szűrők cseréje és alapvető fékjavítási munkák.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Online időpontfoglalás",
+    desc: "Gyors és rugalmas online bejelentkezés a vásárosnaményi telephelyekre.",
   },
 ];
 

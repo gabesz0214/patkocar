@@ -1,17 +1,50 @@
 import { useState } from "react";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { sendBookingEmail } from "../../lib/api/booking.functions";
 
 const services = [
   "Gumiabroncs kereskedelem & Szerelés",
-  "Motorkerékpár gumiabroncs szerelés",
   "Alufelnik és lemezfelnik javítása & forgalmazása",
   "Hidraulika tömlők gyártása, javítása & forgalmazása",
   "Autóápolási és autókozmetikai termékek",
-  "Egyéb kérdés",
+  "Időszakos gyorsszerviz",
+  "Online időpontfoglalás (Egyéb kérdés)",
 ];
 
 export function BookingForm() {
-  const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+    setSuccess(false);
+
+    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+
+    const data = {
+      name: formData.get("name") as string,
+      phone: formData.get("phone") as string,
+      email: formData.get("email") as string,
+      car: formData.get("car") as string,
+      service: formData.get("service") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      await sendBookingEmail({ data });
+      setSuccess(true);
+      formElement.reset();
+    } catch (err: any) {
+      console.error("Submission failed:", err);
+      setError(err?.message || "Hiba történt az ajánlatkérés elküldése során. Kérjük, próbálkozzon újra!");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="idopont" className="relative overflow-hidden bg-ink py-24 text-ink-foreground md:py-32">
@@ -89,67 +122,96 @@ export function BookingForm() {
           </div>
 
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
             className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl md:p-8"
           >
-            {sent ? (
-              <div className="py-16 text-center">
-                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground">
-                  <Send className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 text-2xl font-bold">Köszönjük!</h3>
-                <p className="mt-2 text-white/70">Hamarosan keresünk a megadott elérhetőségen.</p>
-              </div>
-            ) : (
-              <div className="grid gap-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="Teljes név" name="name" placeholder="Kovács János" required />
-                  <Field label="Telefonszám" name="phone" type="tel" placeholder="+36 30 …" required />
-                </div>
-                <Field label="E-mail cím" name="email" type="email" placeholder="email@pelda.hu" required />
-                <Field label="Autó típusa, évjárata" name="car" placeholder="VW Golf 7, 2017" required />
-
-                <div>
-                  <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/60">
-                    Kívánt szolgáltatás
-                  </label>
-                  <select
-                    name="service"
-                    required
-                    defaultValue=""
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
+            {success && (
+              <div className="mb-6 rounded-2xl border border-primary bg-primary/10 p-5 text-primary shadow-glow transition-all duration-300">
+                <div className="flex items-start gap-3">
+                  <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground shrink-0 mt-0.5">
+                    <Send className="h-4 w-4" />
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-base text-white">Sikeres ajánlatkérés!</h4>
+                    <p className="mt-1 text-sm text-white/80 leading-relaxed">
+                      Az ajánlatkérést sikeresen fogadtuk. Megerősítő e-mailt küldtünk a megadott e-mail címre. Kollégánk hamarosan keresni fog a megadott telefonszámon!
+                    </p>
+                  </div>
+                  <button 
+                    type="button" 
+                    onClick={() => setSuccess(false)}
+                    className="text-white/50 hover:text-white transition-colors cursor-pointer text-xs p-1"
                   >
-                    <option value="" disabled className="text-foreground">Válassz egyet…</option>
-                    {services.map((s) => (
-                      <option key={s} value={s} className="text-foreground">{s}</option>
-                    ))}
-                  </select>
+                    Bezárás
+                  </button>
                 </div>
-
-                <div>
-                  <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/60">
-                    Üzenet / Hibajelenség
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={4}
-                    placeholder="Pl. furcsa zaj fékezésnél…"
-                    className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
-                >
-                  Időpont / Árajánlat kérése
-                  <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </button>
               </div>
             )}
+
+            {error && (
+              <div className="mb-6 rounded-2xl border border-destructive bg-destructive/10 p-5 text-destructive-foreground transition-all duration-300">
+                <div className="flex items-start gap-3">
+                  <div className="flex-1">
+                    <h4 className="font-bold text-base text-white">Hiba történt!</h4>
+                    <p className="mt-1 text-sm text-white/80 leading-relaxed">{error}</p>
+                  </div>
+                  <button 
+                    type="button" 
+                    onClick={() => setError(null)}
+                    className="text-white/50 hover:text-white transition-colors cursor-pointer text-xs p-1"
+                  >
+                    Bezárás
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <div className="grid gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Teljes név" name="name" placeholder="Kovács János" required />
+                <Field label="Telefonszám" name="phone" type="tel" placeholder="+36 30 …" required />
+              </div>
+              <Field label="E-mail cím" name="email" type="email" placeholder="email@pelda.hu" required />
+              <Field label="Autó típusa, évjárata" name="car" placeholder="VW Golf 7, 2017" required />
+
+              <div>
+                <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/60">
+                  Kívánt szolgáltatás
+                </label>
+                <select
+                  name="service"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
+                >
+                  <option value="" disabled className="text-foreground">Válassz egyet…</option>
+                  {services.map((s) => (
+                    <option key={s} value={s} className="text-foreground">{s}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-white/60">
+                  Üzenet / Hibajelenség
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Pl. furcsa zaj fékezésnél…"
+                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Küldés folyamatban..." : "Időpont / Árajánlat kérése"}
+                {!isSubmitting && <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
+              </button>
+            </div>
           </form>
         </div>
       </div>

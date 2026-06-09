@@ -12,9 +12,9 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Patkó Car – Prémium gumi- és gyorsszerviz Vásárosnamény" },
-      { name: "description", content: "Prémium gumi- és gyorsszerviz, alufelni és lemezfelni javítás, azonnali hidraulika tömlő gyártás és autókozmetikai termékek Vásárosnaményban." },
-      { property: "og:title", content: "Patkó Car – Prémium gumi- és gyorsszerviz" },
+      { title: "Patkó Car – Gumi-, Gyorsszerviz és Hidraulika Vásárosnamény" },
+      { name: "description", content: "Prémium gumi- és gyorsszerviz, alufelni javítás, azonnali hidraulika tömlő gyártás és autókozmetikai termékek Vásárosnaményban." },
+      { property: "og:title", content: "Patkó Car – Gumi-, Gyorsszerviz és Hidraulika" },
       { property: "og:description", content: "Gumiabroncs szerelés, felnijavítás és azonnali hidraulika tömlő roppantás Vásárosnaményban. Foglalj időpontot online." },
     ],
   }),

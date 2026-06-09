@@ -21,7 +21,7 @@ export function Footer() {
               <span className="text-lg font-extrabold tracking-tight">Patkó Car</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Prémium gumi- és motorszerviz, felnijavítás, hidraulika tömlő gyártás és autókozmetika Vásárosnaményban.
+              Prémium gumi- és gyorsszerviz, alufelni javítás, azonnali hidraulika tömlő gyártás és autókozmetikai termékek Vásárosnaményban.
             </p>
           </div>
 
