@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Wrench, Clock, Phone, Mail, MapPin, X } from "lucide-react";
+import { SzechenyiBanner } from "./SzechenyiBanner";
 
 export function Footer() {
   const [activeModal, setActiveModal] = useState<"aszf" | "gdpr" | null>(null);
@@ -94,6 +95,22 @@ export function Footer() {
               Adatkezelési Tájékoztató (GDPR)
             </button>
           </div>
+        </div>
+
+        {/* Regulatory Banner */}
+        <div className="mt-8 border-t border-border pt-6 flex flex-col md:flex-row items-center md:justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="bg-white p-1 rounded border border-zinc-200 shadow-sm shrink-0">
+              <SzechenyiBanner className="shrink-0 cursor-pointer select-none bg-white p-0.5 rounded hover:opacity-90 active:scale-[0.98] transition-all" />
+            </div>
+            <div className="text-[10px] text-muted-foreground max-w-xl leading-normal">
+              <strong>Támogatott projekt:</strong> Magyar Falu Vállalkozás-újraindítási Program a Patkó Car Kft-nél.<br />
+              Azonosítószám: GINOP_PLUSZ-1.2.2-22-2022-02216 · Támogatás összege: 9,06 millió Ft.
+            </div>
+          </div>
+          <span className="text-[10px] font-extrabold tracking-widest text-[#003399] uppercase shrink-0">
+            BEFEKTETÉS A JÖVŐBE
+          </span>
         </div>
       </div>
 
