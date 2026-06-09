@@ -11,10 +11,10 @@ export function Hero() {
           alt="Patkó-Car Kft céglogós háttér"
           width={1920}
           height={1280}
-          className="hidden md:block h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center blur-[3px] md:blur-0 transition-all duration-300"
         />
         {/* Dark overlay: solid on mobile/tablet for readability, gradient on desktop to expose the golden logo on the right */}
-        <div className="absolute inset-0 bg-black/40 md:bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
+        <div className="absolute inset-0 bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
       </div>
 
       <div className="w-full container-px relative mx-auto max-w-7xl pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-14 lg:pb-24">
