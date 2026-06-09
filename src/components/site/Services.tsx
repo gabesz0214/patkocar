@@ -1,10 +1,10 @@
 import {
   Disc3,
+  Sparkles,
   Wrench,
   Droplet,
-  Sparkles,
-  Clock,
-  CalendarCheck,
+  ShieldAlert,
+  Layers,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -15,29 +15,29 @@ const services = [
     desc: "Prémium és minőségi gumiabroncsok értékesítése, szerelése és centírozása.",
   },
   {
+    icon: Sparkles,
+    title: "Autóápolási termékek",
+    desc: "Minőségi autóápolási szerek, viaszok, tisztítószerek és kiegészítők forgalmazása.",
+  },
+  {
     icon: Wrench,
-    title: "Alufelnik és lemezfelnik javítása & forgalmazása",
+    title: "Alufelnik, lemezfelnik javítása és forgalmazása",
     desc: "Sérült felnik professzionális javítása, görgőzése és új felnik értékesítése.",
   },
   {
     icon: Droplet,
-    title: "Hidraulika tömlők gyártása, javítása & forgalmazása",
+    title: "Hidraulika tömlők gyártása, javítása és forgalmazása",
     desc: "Azonnali hidraulika tömlő roppantás, méretre gyártás és javítás.",
   },
   {
-    icon: Sparkles,
-    title: "Autóápolási és autókozmetikai termékek",
-    desc: "Minőségi autóápolási szerek, viaszok, tisztítószerek és kiegészítők forgalmazása.",
+    icon: ShieldAlert,
+    title: "Kerékanyák, kerékcsavarok, kerékőrök",
+    desc: "Biztonsági kerékőrök, minőségi kerékcsavarok és anyák széles választéka minden autótípushoz.",
   },
   {
-    icon: Clock,
-    title: "Időszakos gyorsszerviz",
-    desc: "Gyors olajcsere, szűrők cseréje és alapvető fékjavítási munkák.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Online időpontfoglalás",
-    desc: "Gyors és rugalmas online bejelentkezés a vásárosnaményi telephelyekre.",
+    icon: Layers,
+    title: "Nyomtávszélesítők, tehermentesítő gyűrűk",
+    desc: "Nyomtávszélesítők és precíz tehermentesítő gyűrűk értékesítése és felszerelése a tökéletes illeszkedésért.",
   },
 ];
 

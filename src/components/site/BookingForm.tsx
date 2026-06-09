@@ -4,11 +4,11 @@ import { sendBookingEmail } from "../../lib/api/booking.functions";
 
 const services = [
   "Gumiabroncs kereskedelem & Szerelés",
-  "Alufelnik és lemezfelnik javítása & forgalmazása",
-  "Hidraulika tömlők gyártása, javítása & forgalmazása",
-  "Autóápolási és autókozmetikai termékek",
-  "Időszakos gyorsszerviz",
-  "Online időpontfoglalás (Egyéb kérdés)",
+  "Autóápolási termékek",
+  "Alufelnik, lemezfelnik javítása és forgalmazása",
+  "Hidraulika tömlők gyártása, javítása és forgalmazása",
+  "Kerékanyák, kerékcsavarok, kerékőrök",
+  "Nyomtávszélesítők, tehermentesítő gyűrűk",
 ];
 
 export function BookingForm() {
