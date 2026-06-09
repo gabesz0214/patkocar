@@ -35,4 +35,6 @@ dist-ssr
 scratch/
 /*.js
 !/eslint.config.js
+.vercel/
+
 
