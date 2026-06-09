@@ -66,13 +66,6 @@ const GALLERY_IMAGES: GalleryImage[] = [
 
   // FELNIK (Alufelni javítás, görgőzés, gumik, szerelések)
   {
-    postId: "Gumicsere-Poster",
-    text: "Szezonális gumicsere és gyors szerviz Vásárosnaményban.",
-    url: "/assets/gallery/felni-new-1.png",
-    time: "2026-06-08T21:02:00.000Z",
-    category: "felnik"
-  },
-  {
     postId: "Silver-Black-Spokes",
     text: "Prémium fekete-polír alufelni értékesítés és gumiszerelés.",
     url: "/assets/gallery/felni-new-2.png",
