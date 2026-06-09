@@ -45,7 +45,7 @@ export function BookingForm() {
     }
 
     const sendEmail = async (body: any) => {
-      const res = await fetch("https://api.brevo.com/v3/smtp/emails", {
+      const res = await fetch("https://api.brevo.com/v3/smtp/email", {
         method: "POST",
         headers: {
           "accept": "application/json",
