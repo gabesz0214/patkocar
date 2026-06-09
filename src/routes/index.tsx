@@ -9,19 +9,16 @@ import { BookingForm } from "@/components/site/BookingForm";
 import { Brands } from "@/components/site/Brands";
 import { Footer } from "@/components/site/Footer";
 
+import { useEffect } from "react";
+
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Patkó Car – Gumi-, Gyorsszerviz és Hidraulika Vásárosnamény" },
-      { name: "description", content: "Prémium gumi- és gyorsszerviz, alufelni javítás, azonnali hidraulika tömlő gyártás és autókozmetikai termékek Vásárosnaményban." },
-      { property: "og:title", content: "Patkó Car – Gumi-, Gyorsszerviz és Hidraulika" },
-      { property: "og:description", content: "Gumiabroncs szerelés, felnijavítás és azonnali hidraulika tömlő roppantás Vásárosnaményban. Foglalj időpontot online." },
-    ],
-  }),
   component: Index,
 });
 
 function Index() {
+  useEffect(() => {
+    document.title = "Patkó Car – Gumi-, Gyorsszerviz és Hidraulika Vásárosnamény";
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Header />

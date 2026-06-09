@@ -3,17 +3,16 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { PalyazatContent } from "@/components/site/PalyazatContent";
 
+import { useEffect } from "react";
+
 export const Route = createFileRoute("/palyazat")({
-  head: () => ({
-    meta: [
-      { title: "Pályázat – Patkó Car" },
-      { name: "description", content: "Magyar Falu Vállalkozás-újraindítási Program a Patkó Car Kft-nél. GINOP_PLUSZ-1.2.2-22-2022-02216." },
-    ],
-  }),
   component: PalyazatPage,
 });
 
 function PalyazatPage() {
+  useEffect(() => {
+    document.title = "Pályázat – Patkó Car";
+  }, []);
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between">
       <div>
