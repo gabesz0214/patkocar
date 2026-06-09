@@ -15,14 +15,14 @@ export function Stats() {
           {stats.map((s) => (
             <div
               key={s.label}
-              className="group flex items-center gap-4 rounded-2xl bg-surface p-5 transition-colors hover:bg-accent"
+              className="group flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 rounded-2xl bg-surface p-4 sm:p-5 transition-colors hover:bg-accent h-auto"
             >
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-ink text-primary">
+              <span className="grid h-10 w-10 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-xl bg-ink text-primary">
                 <s.icon className="h-5 w-5" />
               </span>
               <div className="min-w-0">
-                <div className="text-xl font-extrabold tracking-tight text-foreground">{s.value}</div>
-                <div className="text-xs font-medium text-muted-foreground md:text-sm">{s.label}</div>
+                <div className="text-base sm:text-lg md:text-xl font-extrabold tracking-tight text-foreground">{s.value}</div>
+                <div className="text-[10px] sm:text-xs font-medium text-muted-foreground md:text-sm">{s.label}</div>
               </div>
             </div>
           ))}

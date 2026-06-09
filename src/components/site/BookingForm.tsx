@@ -346,7 +346,7 @@ export function BookingForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group mt-2 inline-flex items-center justify-center gap-2 rounded-2xl md:rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
+                className="group mt-2 inline-flex items-center justify-center gap-2 rounded-2xl md:rounded-full bg-primary px-6 py-5 md:py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Küldés folyamatban..." : "Időpont / Árajánlat kérése"}
                 {!isSubmitting && <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
