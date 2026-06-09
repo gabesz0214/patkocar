@@ -1,6 +1,6 @@
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero-logo-bg.jpg";
-import mobileTexture from "@/assets/mobile-texture.png";
+import mobileTexture from "@/assets/mobile-texture.jpg";
 import { SzechenyiBanner } from "./SzechenyiBanner";
 
 export function Hero() {
@@ -21,8 +21,10 @@ export function Hero() {
           height={1280}
           className="hidden md:block h-full w-full object-cover object-center transition-all duration-300"
         />
-        {/* Dark overlay: solid on mobile/tablet for readability, gradient on desktop to expose the golden logo on the right */}
-        <div className="absolute inset-0 bg-black/30 md:bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
+        {/* Dark overlay for mobile/tablet for readability */}
+        <div className="absolute inset-0 block md:hidden bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+        {/* Dark overlay for desktop to expose the golden logo on the right */}
+        <div className="absolute inset-0 hidden md:block md:bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
       </div>
 
       <div className="w-full container-px relative mx-auto max-w-7xl pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-14 lg:pb-24">
