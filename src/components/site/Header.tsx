@@ -9,7 +9,7 @@ const links = [
   { href: "/#rolunk", label: "Rólunk" },
   { href: "/#galeria", label: "Galéria" },
   { href: "/#kapcsolat", label: "Kapcsolat" },
-  { href: "/palyazat", label: "Pályázat" },
+  { href: "/#palyazat", label: "Pályázat" },
 ];
 
 export function Header() {
@@ -19,17 +19,11 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const path = location.pathname;
-      if (path === "/palyazat") {
-        setActiveLink("/palyazat");
-        return;
-      }
-
-      const sections = ["home", "szolgaltatasok", "rolunk", "galeria", "kapcsolat"];
+      const sections = ["home", "szolgaltatasok", "rolunk", "galeria", "kapcsolat", "palyazat"];
       
-      // If we are at the very bottom of the page, highlight Kapcsolat
+      // If we are at the very bottom of the page, highlight palyazat or kapcsolat
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
-        setActiveLink("/#kapcsolat");
+        setActiveLink("/#palyazat");
         return;
       }
 

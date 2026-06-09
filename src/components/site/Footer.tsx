@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         {/* Regulatory Banner */}
-        <div className="mt-8 border-t border-border pt-6 flex flex-col md:flex-row items-center md:justify-between gap-6">
+        <div id="palyazat" className="mt-8 border-t border-border pt-6 flex flex-col md:flex-row items-center md:justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <div className="bg-white p-1 rounded border border-zinc-200 shadow-sm shrink-0">
               <SzechenyiBanner className="shrink-0 cursor-pointer select-none bg-white p-0.5 rounded hover:opacity-90 active:scale-[0.98] transition-all" />
