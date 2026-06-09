@@ -16,10 +16,10 @@ export const sendBookingEmail = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const config = getServerConfig();
-    const apiKey = config.brevoApiKey;
+    const apiKey = process.env.BREVO_API_KEY || config.brevoApiKey;
 
     if (!apiKey) {
-      console.error("Missing Brevo API key in server config.");
+      console.error("Missing Brevo API key in server config. Checked process.env.BREVO_API_KEY and config.");
       throw new Error("A szerver e-mail küldési beállítása hiányos. Kérjük, próbálkozzon később!");
     }
 
