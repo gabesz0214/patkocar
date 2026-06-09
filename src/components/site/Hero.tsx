@@ -11,10 +11,10 @@ export function Hero() {
           alt="Patkó-Car Kft céglogós háttér"
           width={1920}
           height={1280}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center blur-[3px] md:blur-0 transition-all duration-300"
         />
         {/* Dark overlay: solid on mobile/tablet for readability, gradient on desktop to expose the golden logo on the right */}
-        <div className="absolute inset-0 bg-black/60 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
+        <div className="absolute inset-0 bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
       </div>
 
       <div className="w-full container-px relative mx-auto max-w-7xl pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-14 lg:pb-24">
@@ -53,6 +53,14 @@ export function Hero() {
           <div className="mt-6 flex items-center gap-3 text-sm text-white/60">
             <ShieldCheck className="h-5 w-5 text-primary" />
             Garancia minden elvégzett munkára
+          </div>
+
+          {/* Széchenyi banner on mobile */}
+          <div className="mt-8 md:hidden flex flex-col items-start gap-2">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-white/45">
+              Pályázati információk:
+            </span>
+            <SzechenyiBanner className="shrink-0 cursor-pointer select-none bg-white p-1 rounded border border-zinc-200 shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" />
           </div>
         </div>
       </div>

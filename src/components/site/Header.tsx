@@ -69,7 +69,7 @@ export function Header() {
               <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-400">Gumi- és gyorsszerviz</span>
             </span>
           </a>
-          <SzechenyiBanner />
+          <SzechenyiBanner className="hidden md:block shrink-0 cursor-pointer select-none bg-white p-1 rounded border border-zinc-200 shadow-sm hover:opacity-90 active:scale-[0.98] transition-all ml-1 md:ml-2" />
         </div>
 
         <nav className="hidden lg:flex items-center gap-1">

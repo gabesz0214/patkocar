@@ -81,7 +81,7 @@ function SzechenyiLogo({ size = 42 }: { size?: number }) {
   );
 }
 
-export function SzechenyiBanner() {
+export function SzechenyiBanner({ className }: { className?: string }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -106,7 +106,7 @@ export function SzechenyiBanner() {
           e.stopPropagation();
           setModalOpen(true);
         }}
-        className="hidden md:block shrink-0 cursor-pointer select-none bg-white p-1 rounded border border-zinc-200 shadow-sm hover:opacity-90 active:scale-[0.98] transition-all ml-1 md:ml-2"
+        className={className || "hidden md:block shrink-0 cursor-pointer select-none bg-white p-1 rounded border border-zinc-200 shadow-sm hover:opacity-90 active:scale-[0.98] transition-all ml-1 md:ml-2"}
         title="Pályázati információk megnyitása"
       >
         <img
