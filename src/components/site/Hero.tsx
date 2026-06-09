@@ -1,5 +1,6 @@
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero-logo-bg.jpg";
+import mobileTexture from "@/assets/mobile-texture.png";
 import { SzechenyiBanner } from "./SzechenyiBanner";
 
 export function Hero() {
@@ -7,14 +8,21 @@ export function Hero() {
     <section id="home" className="relative overflow-hidden bg-ink-gradient text-ink-foreground min-h-[calc(100vh-4.5rem+3rem)] md:min-h-[calc(100vh-4.5rem+4rem)] flex flex-col justify-start">
       <div className="absolute inset-0">
         <img
+          src={mobileTexture}
+          alt="Patkó-Car Kft textúrázott háttér"
+          width={1920}
+          height={1280}
+          className="block md:hidden h-full w-full object-cover object-center transition-all duration-300"
+        />
+        <img
           src={heroImg}
           alt="Patkó-Car Kft céglogós háttér"
           width={1920}
           height={1280}
-          className="h-full w-full object-cover object-center blur-[3px] md:blur-0 transition-all duration-300"
+          className="hidden md:block h-full w-full object-cover object-center transition-all duration-300"
         />
         {/* Dark overlay: solid on mobile/tablet for readability, gradient on desktop to expose the golden logo on the right */}
-        <div className="absolute inset-0 bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
+        <div className="absolute inset-0 bg-black/30 md:bg-black/75 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/55 lg:to-black/25" />
       </div>
 
       <div className="w-full container-px relative mx-auto max-w-7xl pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-14 lg:pb-24">
