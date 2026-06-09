@@ -54,15 +54,6 @@ export function Hero() {
             <ShieldCheck className="h-5 w-5 text-primary" />
             Garancia minden elvégzett munkára
           </div>
-
-          {/* Standalone brand image showcase on mobile */}
-          <div className="mt-8 block md:hidden relative overflow-hidden rounded-3xl border border-white/10 shadow-elegant">
-            <img
-              src={heroImg}
-              alt="Patkó-Car Kft céglogó"
-              className="w-full aspect-[16/9] object-cover"
-            />
-          </div>
         </div>
       </div>
     </section>
