@@ -62,11 +62,11 @@ export function Services() {
           </a>
         </div>
 
-        <div className="mt-12 flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 gap-4 -mx-5 px-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+        <div className="mt-12 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory flex-nowrap scrollbar-hide w-full px-4 md:px-0">
           {services.map((s) => (
             <article
               key={s.title}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-7 transition-all duration-300 hover:-translate-y-1 md:border-border md:bg-card md:hover:border-primary/40 hover:shadow-elegant w-[85vw] sm:w-[380px] md:w-auto shrink-0 md:shrink snap-start md:snap-align-none"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-7 transition-all duration-300 hover:-translate-y-1 md:border-border md:bg-card md:hover:border-primary/40 hover:shadow-elegant min-w-[85vw] md:min-w-0 snap-start flex-shrink-0"
             >
               <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/0 blur-3xl transition-all duration-500 group-hover:bg-primary/20" />
               <div className="relative flex items-start justify-between">
