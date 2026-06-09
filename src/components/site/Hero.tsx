@@ -23,7 +23,7 @@ export function Hero() {
             <Sparkles className="h-3.5 w-3.5" />
             Vásárosnamény · Márkafüggetlen
           </span>
-          <h1 className="mt-4 text-balance text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-4 text-balance text-3xl font-extrabold leading-[1.1] sm:text-5xl sm:leading-[1.05] md:text-6xl lg:text-7xl">
             Profi gumiszerviz és hidraulika,{" "}
             <span className="bg-accent-gradient bg-clip-text text-transparent">
               ahol a biztonságod az első.
@@ -37,14 +37,14 @@ export function Hero() {
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href="#idopont"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-2xl md:rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
             >
               Online Időpontkérés
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#szolgaltatasok"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-2xl md:rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur hover:bg-white/10"
             >
               Szolgáltatások böngészése
             </a>

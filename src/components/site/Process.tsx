@@ -38,7 +38,7 @@ export function Process() {
           {steps.map((s, i) => (
             <div
               key={s.title}
-              className="relative rounded-3xl border border-border bg-card p-8 shadow-elegant"
+              className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-8 shadow-elegant md:border-border md:bg-card"
             >
               <div className="absolute -top-4 left-8 grid h-9 w-9 place-items-center rounded-full bg-primary text-sm font-extrabold text-primary-foreground">
                 {i + 1}

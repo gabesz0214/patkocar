@@ -293,7 +293,7 @@ export function Galeria() {
             href="https://www.facebook.com/patko.car"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white font-bold text-xs py-4 px-8 tracking-widest uppercase transition-all duration-300 hover:scale-[1.02] shadow-sm"
+            className="inline-flex items-center gap-3 rounded-2xl md:rounded-full border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white font-bold text-xs py-4 px-8 tracking-widest uppercase transition-all duration-300 hover:scale-[1.02] shadow-sm"
           >
             <Facebook className="h-4 w-4 text-[#1877F2]" />
             Kövess minket a Facebookon a friss posztokért

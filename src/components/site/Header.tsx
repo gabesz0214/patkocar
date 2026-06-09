@@ -131,7 +131,7 @@ export function Header() {
             <a
               href="/#idopont"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:scale-[1.02] active:scale-100 transition-transform"
+              className="mt-2 inline-flex items-center justify-center rounded-2xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:scale-[1.02] active:scale-100 transition-transform"
             >
               Időpontfoglalás
             </a>

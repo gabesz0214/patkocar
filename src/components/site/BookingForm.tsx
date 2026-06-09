@@ -322,7 +322,7 @@ export function BookingForm() {
                   name="service"
                   required
                   defaultValue=""
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
+                  className="w-full rounded-2xl md:rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
                 >
                   <option value="" disabled className="text-foreground">Válassz egyet…</option>
                   {services.map((s) => (
@@ -339,14 +339,14 @@ export function BookingForm() {
                   name="message"
                   rows={4}
                   placeholder="Pl. furcsa zaj fékezésnél…"
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
+                  className="w-full resize-none rounded-2xl md:rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
+                className="group mt-2 inline-flex items-center justify-center gap-2 rounded-2xl md:rounded-full bg-primary px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Küldés folyamatban..." : "Időpont / Árajánlat kérése"}
                 {!isSubmitting && <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
@@ -370,7 +370,7 @@ function Field({ label, name, type = "text", placeholder, required }: {
         type={type}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
+        className="w-full rounded-2xl md:rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-primary"
       />
     </div>
   );
