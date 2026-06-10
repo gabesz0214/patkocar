@@ -49,7 +49,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@patkocar.hu" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@patkocar.hu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                >
                   <Mail className="h-4 w-4 text-primary" /> info@patkocar.hu
                 </a>
               </li>

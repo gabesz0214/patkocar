@@ -221,7 +221,12 @@ export function BookingForm() {
                   <div className="font-semibold text-white group-hover:text-primary transition-colors">+36 20 222 7750</div>
                 </div>
               </a>
-              <a href="mailto:info@patkocar.hu" className="flex items-center gap-4 group">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@patkocar.hu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+              >
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Mail className="h-5 w-5" />
                 </span>
