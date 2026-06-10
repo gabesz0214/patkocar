@@ -117,8 +117,8 @@ export function BookingForm() {
     `;
 
     const adminEmailPayload = {
-      sender: { name: "Patkó Car Weboldal", email: "patkocarkft@gmail.com" },
-      to: [{ email: "patkocarkft@gmail.com" }],
+      sender: { name: "Patkó Car Weboldal", email: "ronaldo02149@gmail.com" },
+      to: [{ email: "ronaldo02149@gmail.com" }],
       subject: "Új ajánlatkérés érkezett - Patkó Car",
       htmlContent: adminEmailHtml,
     };
@@ -165,7 +165,7 @@ export function BookingForm() {
     `;
 
     const customerEmailPayload = {
-      sender: { name: "Patkó Car", email: "patkocarkft@gmail.com" },
+      sender: { name: "Patkó Car", email: "ronaldo02149@gmail.com" },
       to: [{ email: data.email }],
       subject: "Sikeres ajánlatkérés – Patkó Car",
       htmlContent: customerEmailHtml,
