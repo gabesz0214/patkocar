@@ -117,8 +117,8 @@ export function BookingForm() {
     `;
 
     const adminEmailPayload = {
-      sender: { name: "Patkó Car Weboldal", email: "ronaldo02149@gmail.com" },
-      to: [{ email: "ronaldo02149@gmail.com" }],
+      sender: { name: "Patkó Car Weboldal", email: "patkocarkft@gmail.com" },
+      to: [{ email: "patkocarkft@gmail.com" }],
       subject: "Új ajánlatkérés érkezett - Patkó Car",
       htmlContent: adminEmailHtml,
     };
@@ -165,7 +165,7 @@ export function BookingForm() {
     `;
 
     const customerEmailPayload = {
-      sender: { name: "Patkó Car", email: "ronaldo02149@gmail.com" },
+      sender: { name: "Patkó Car", email: "patkocarkft@gmail.com" },
       to: [{ email: data.email }],
       subject: "Sikeres ajánlatkérés – Patkó Car",
       htmlContent: customerEmailHtml,
@@ -222,7 +222,7 @@ export function BookingForm() {
                 </div>
               </a>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@patkocar.hu"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=patkocarkft@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -232,7 +232,7 @@ export function BookingForm() {
                 </span>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-white/50">E-mail</div>
-                  <div className="font-semibold">info@patkocar.hu</div>
+                  <div className="font-semibold">patkocarkft@gmail.com</div>
                 </div>
               </a>
               <a

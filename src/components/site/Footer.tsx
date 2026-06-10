@@ -50,12 +50,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@patkocar.hu"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=patkocarkft@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
-                  <Mail className="h-4 w-4 text-primary" /> info@patkocar.hu
+                  <Mail className="h-4 w-4 text-primary" /> patkocarkft@gmail.com
                 </a>
               </li>
               <li>
@@ -176,7 +176,7 @@ export function Footer() {
                     <li><strong>Cégnév:</strong> PATKÓ-CAR Kft.</li>
                     <li><strong>Székhely:</strong> 4800 Vásárosnamény, Kossuth út 49.</li>
                     <li><strong>Telephelyek:</strong> I. Kossuth út 49., II. Árpád út 40.</li>
-                    <li><strong>E-mail:</strong> info@patkocar.hu</li>
+                    <li><strong>E-mail:</strong> patkocarkft@gmail.com</li>
                   </ul>
 
                   <h4 className="font-bold text-white mt-4">2. Szolgáltatások igénybevétele</h4>
@@ -197,7 +197,7 @@ export function Footer() {
                   <ul className="list-disc pl-5 space-y-1">
                     <li><strong>Adatkezelő:</strong> PATKÓ-CAR Kft.</li>
                     <li><strong>Székhely:</strong> 4800 Vásárosnamény, Kossuth út 49.</li>
-                    <li><strong>E-mail:</strong> info@patkocar.hu</li>
+                    <li><strong>E-mail:</strong> patkocarkft@gmail.com</li>
                   </ul>
 
                   <h4 className="font-bold text-white mt-4">2. Az adatkezelés célja és jogalapja</h4>
@@ -210,7 +210,7 @@ export function Footer() {
                   <p>Az adatokat az időpontfoglalás teljesítésétől számított 1 évig, vagy a hozzájárulás visszavonásáig kezeljük, ezt követően biztonságosan töröljük.</p>
 
                   <h4 className="font-bold text-white mt-4">5. Az Ön jogai</h4>
-                  <p>Ön bármikor kérhet tájékoztatást a kezelt adatairól, kérheti azok helyesbítését, korlátozását vagy törlését az info@patkocar.hu e-mail címen.</p>
+                  <p>Ön bármikor kérhet tájékoztatást a kezelt adatairól, kérheti azok helyesbítését, korlátozását vagy törlését a patkocarkft@gmail.com e-mail címen.</p>
                 </>
               )}
             </div>
