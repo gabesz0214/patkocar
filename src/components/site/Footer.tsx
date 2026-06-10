@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Wrench, Clock, Phone, Mail, MapPin, X } from "lucide-react";
+import { Wrench, Clock, Phone, Mail, MapPin, X, Facebook, Instagram } from "lucide-react";
 import { SzechenyiBanner } from "./SzechenyiBanner";
 
 export function Footer() {
@@ -79,21 +79,43 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Patkó Car — patkocar.hu. Minden jog fenntartva.</span>
-          <div className="flex gap-4">
-            <button
-              onClick={() => setActiveModal("aszf")}
-              className="hover:text-primary hover:underline transition-colors cursor-pointer text-zinc-400"
-            >
-              Általános Szerződési Feltételek (ÁSZF)
-            </button>
-            <button
-              onClick={() => setActiveModal("gdpr")}
-              className="hover:text-primary hover:underline transition-colors cursor-pointer text-zinc-400"
-            >
-              Adatkezelési Tájékoztató (GDPR)
-            </button>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <div className="flex gap-4">
+              <button
+                onClick={() => setActiveModal("aszf")}
+                className="hover:text-primary hover:underline transition-colors cursor-pointer text-zinc-400"
+              >
+                Általános Szerződési Feltételek (ÁSZF)
+              </button>
+              <button
+                onClick={() => setActiveModal("gdpr")}
+                className="hover:text-primary hover:underline transition-colors cursor-pointer text-zinc-400"
+              >
+                Adatkezelési Tájékoztató (GDPR)
+              </button>
+            </div>
+            <div className="flex items-center gap-4 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-3 sm:pt-0 sm:pl-6 w-full sm:w-auto justify-start">
+              <a
+                href="https://www.facebook.com/patko.car"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-zinc-400 hover:text-[#1877F2] transition-colors p-1 hover:scale-105 active:scale-95"
+              >
+                <Facebook className="h-4.5 w-4.5" />
+              </a>
+              <a
+                href="https://www.instagram.com/patko_car_kft/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-zinc-400 hover:text-[#E1306C] transition-colors p-1 hover:scale-105 active:scale-95"
+              >
+                <Instagram className="h-4.5 w-4.5" />
+              </a>
+            </div>
           </div>
         </div>
 
