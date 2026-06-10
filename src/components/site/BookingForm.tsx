@@ -324,9 +324,9 @@ export function BookingForm() {
                   defaultValue=""
                   className="w-full rounded-2xl md:rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
                 >
-                  <option value="" disabled className="text-foreground">Válassz egyet…</option>
+                  <option value="" disabled className="bg-zinc-900 text-white">Válassz egyet…</option>
                   {services.map((s) => (
-                    <option key={s} value={s} className="text-foreground">{s}</option>
+                    <option key={s} value={s} className="bg-zinc-900 text-white">{s}</option>
                   ))}
                 </select>
               </div>
